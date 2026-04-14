@@ -1,0 +1,8 @@
+你好，请根据以下信息，为我生成三版拒绝候选人的回复。
+
+候选人称呼：{{candidate_name}}
+岗位名称：{{job_title}}
+面试官评价：
+{{feedback_text}}
+
+请严格按照系统指令，只返回一个包含 version1、version2、version3 三个键的 JSON 对象。

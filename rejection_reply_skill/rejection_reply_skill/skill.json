@@ -1,0 +1,49 @@
+{
+  "name": "volcengine_rejection_reply",
+  "summary": "火山引擎 HR 拒信助手：根据面试官评价，为 HR 在微信上跟进回复候选人提供 3 个合规、得体、不同语气的版本。",
+  "params": [
+    {
+      "name": "candidate_name",
+      "type": "string",
+      "required": false,
+      "description": "候选人的称呼，如'张同学'、'李先生'，用于生成更个性化的回复。"
+    },
+    {
+      "name": "job_title",
+      "type": "string",
+      "required": true,
+      "description": "招聘的岗位名称，如'资深算法工程师'。"
+    },
+    {
+      "name": "feedback_text",
+      "type": "string",
+      "required": true,
+      "description": "面试官的原始评价或HR提炼的要点，是生成回复的核心依据。"
+    }
+  ],
+  "llm": {
+    "model": "moonshot-v1-128k",
+    "temperature": 0.4
+  },
+  "prompt": {
+    "system": "file://prompts/system_prompt.txt",
+    "user": "file://prompts/user_prompt_template.txt"
+  },
+  "output": {
+    "type": "json",
+    "fields": [
+      {
+        "name": "version1",
+        "description": "稳妥标准版回复：礼貌清晰，最通用、最稳妥的回复版本。"
+      },
+      {
+        "name": "version2",
+        "description": "温和鼓励版回复：语气更柔和，侧重安抚与鼓励，传递积极信号。"
+      },
+      {
+        "name": "version3",
+        "description": "简洁直白版回复：简短干脆，直接点明核心差距，但仍保持礼貌。"
+      }
+    ]
+  }
+}
