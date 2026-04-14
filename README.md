@@ -1,2 +1,19 @@
-# hr-rejection-helper
-HR Rejection Letter Assistant Skill | Automatically Generate 3 Friendly &amp; Compliant WeChat-Style Interview Rejection Responses
+# HR 拒信助手 Skill
+适用于：候选人微信追问面试未通过原因
+
+## 功能
+- 输入面试官评价
+- 自动生成 3 版微信友好、合规的回复
+  - 标准版
+  - 温和鼓励版
+  - 简洁直白版
+
+## 使用方式
+1. 下载 ZIP 文件
+2. 发送给 OpenClaw 并安装调试
+3. 粘贴面试官评价即可生成回复
+
+## 核心规则
+- 合规第一，不评价性格、隐私、内部信息
+- 语言口语化、不官方、适度透明
+- 可说明：行业经验偏少、AI 经验不足、项目匹配度偏弱等
